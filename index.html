@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="">About</a></li>
+        <li class="nav-item"><a href="">Work</a></li>
+        <li class="nav-item"><a href="">Contact</a></li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div>
+        <h1>Hi, Im Joshua</h1>
+      </div>
+    </header>
+    <main>
+      <div class="section profile">
+        <img src="https://fakeimg.pl/100x100" />
+        <p>I am a junior web developer in Sydney, Australia.</p>
+        <hr class="divider" />
+      </div>
+      <div class="section">
+        <h2>Here Are My Projects</h2>
+        <div class="project">
+          <img src="https://fakeimg.pl/300x200" />
+          <div>
+            <h3>To Do List App</h3>
+            <p>
+              This is a simple to do list app built in android studio using java
+            </p>
+            <a href="https://github.com/JJM6701/Task-Manager">GitHub</a>
+          </div>
+        </div>
+        <div class="project">
+          <img src="https://fakeimg.pl/300x200" />
+          <div>
+            <h3>Lost and Found App</h3>
+            <p>
+              This is a lost and found app built in android studio using java
+            </p>
+            <a href="https://github.com/JJM6701/Lost-Found-App-Maps">GitHub</a>
+          </div>
+        </div>
+        <hr class="divider" />
+      </div>
+      <div class="section">
+        <h2>My Photos</h2>
+        <div class="photo-gallery">
+          <img src="https://fakeimg.pl/200x200" />
+          <img src="https://fakeimg.pl/200x200" />
+          <img src="https://fakeimg.pl/200x200" />
+          <img src="https://fakeimg.pl/200x200" />
+        </div>
+        <hr class="divider" />
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: lightseagreen;
+    line-height: 1.6;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 16px;
+    margin: 0;
+  }
+
+  .nav-item {
+    margin: 0 15px;
+  }
+
+  .nav-item a {
+    text-decoration: none;
+    font-weight: bold;
+    color: lightseagreen;
+  }
+
+  .header {
+    background-image: url("https://fakeimg.pl/1000x500");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+  }
+
+  .header div {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 100%;
+    opacity: 0;
+  }
+
+  .header:hover div {
+    opacity: 1;
+  }
+
+  .header div h1 {
+    margin: 0;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+  }
+
+  .section {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .profile img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  .project {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .project img {
+    border-radius: 10px;
+  }
+
+  .divider {
+    width: 150px;
+    height: 2px;
+    background: lightseagreen;
+    margin: 20px auto;
+  }
+
+  .photo-gallery {
+    display: grid;
+    gap: 10px;
+  }
+
+  .photo-gallery img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  @media (min-width: 600px) {
+    .photo-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .photo-gallery {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>
